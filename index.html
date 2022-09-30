@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Serralheria</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header id="header">
+            <a href="https://wa.me/5548996647887" target="_blank">
+                <img src="imagens/logo-whatz.png" title="Entrar em Contato" id="zapao"
+                    alt="imagem do ícone do aplicativo whatsaap">
+            </a>
+
+            <a href="#">
+                <img src="imagens/seta-cima.png" title="Voltar ao Topo" id="seta-cima"
+                    style="bottom: 90px; right: -50px;" alt="imagem do ícone do aplicativo whatsaap">
+            </a>
+
+            <nav>
+                <ul>
+                    <li id="inicio" title="Início" class="padrao-li" onclick="fechaMenu()">
+                        <a href="index.html#section-inicio">
+                            <img src="imagens/inicio.png" alt="Imagem início">
+                        </a>
+                    </li>
+                    <li id="ferramentas" title="Serviços" class="padrao-li" onclick="fechaMenu()">
+                        <a href="index.html#section-servicos">
+                            <img src="imagens/servicos.png" alt="">
+                        </a>
+                    </li>
+                    <li id="telefone" title="Contato" class="padrao-li" onclick="fechaMenu()">
+                        <a href="index.html#section-contato">
+                            <img src="imagens/telefone.png" alt="">
+                        </a>
+                    </li>
+                    <li id="endereco" title="Localização" class="padrao-li" onclick="fechaMenu()">
+                        <a href="index.html#section-localizacao">
+                            <img src="imagens/local.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <img src="imagens/botao-menu.png" title="Abrir Menu" id="hamburgao" alt="botão que abre o menu">
+            <span id="x-menu"><img src="imagens/x.png" title="Fechar Menu" id="x" alt="imagem de uma letra x"></span>
+            <h1>SERRALHERIA RDR</h1>
+
+        </header>
+        <section id="section-inicio">
+            <h2>INÍCIO</h2>
+            <p>A RDR é uma serralheria Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error labore quis quasi
+                quae totam earum iure rerum harum deleniti dolorem ullam voluptates ratione voluptate expedita
+                aspernatur temporibus, animi quas reiciendis.</p>
+        </section>
+        <section id="section-servicos">
+            <h2>SERVIÇOS</h2>
+            <ul>
+                <li onclick="abreGrade()" id="li-grade">
+                    <p id="p-grade">Grades &#9662</p>
+                    <img src="imagens/grade.jpg" id="grade" alt="">
+                </li>
+                <li onclick="abrePortao()">
+                    <p id="p-portao">Portões &#9662</p>
+                    <img src="imagens/portao.jpg" id="portao" alt="">
+                </li>
+                <li onclick="abreEstrutura()">
+                    <p id="p-estrutura">Estruturas Metálicas &#9662</p>
+                    <img src="imagens/estrutura.jpg" id="estrutura" alt="">
+                </li>
+                <li onclick="abreMotores()">
+                    <p id="p-motores">Instalações de Motores &#9662</p>
+                    <img src="imagens/motores.jpeg" id="motores" alt="">
+                </li>
+            </ul>
+        </section>
+
+        <section id="section-localizacao">
+            <h2>Localização</h2>
+            <p>A RDR está localizada na rua Gabriel Arns, 4533, bairro Saturno, Forquilhinha/SC</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d874.4981277030397!2d-49.45255799219015!3d-28.749640560449084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521879e49a68485%3A0x3b781f6c835db2d5!2sSinop%20madeiras!5e0!3m2!1spt-BR!2sbr!4v1662505417268!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="section-contato">
+            <h2>CONTATO</h2>
+            <ul class="ul-contato">
+                <div>
+                    <li id="contato-telefone"><img src="imagens/contato-telefone.png" alt=""> (48) 99999-9999</li>
+
+                    <li id="contato-zap"><img src="imagens/contato-zap.png" alt=""> (48) 99999-9999</li>
+
+                    <li id="contato-email"><img src="imagens/contato-email.png" alt=""> joaodarosa@gmail.com</li>
+                </div>
+            </ul>
+
+            <h3>Converse com a gente!</h3>
+
+            <form name="myform" action="https://formsubmit.co/kauamaraga@gmail.com" method="POST"
+                onsubmit="validateform()">
+                <label for="form-nome" class="label">Nome</label>
+                <input type="text" placeholder="Digite seu nome" name="Nome" id="form-nome" maxlength="30" required>
+
+                <label for="form-numero" class="label">Telefone</label>
+                <input type="text" name="Número" id="form-numero" placeholder="Ex: (48) 99999-9999" minlength="15"
+                    required>
+
+                <label for="form-email" class="label">Email</label>
+                <input type="email" name="E-mail" id="form-email" placeholder="Digite seu e-mail" required>
+
+                <label for="msg" class="label">Digite sua mensagem</label>
+                <textarea name="Mensagem" id="msg" rows="10" placeholder="Digite aqui" required></textarea>
+
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5502/thanks.html">
+
+                <div class="buttons-form">
+                    <button type="reset" id="btn-submit" style="background-color: #d17803;">Limpar</button>
+                    <button type="submit" id="btn-submit">Enviar</button>
+                </div>
+            </form>
+
+        </section>
+        <footer id="footer">
+            <p>Desenvolvido por <a href="https://www.instagram.com/kaua_marangoni/">Kauã</a> e <a
+                    href="https://www.instagram.com/yurift00/">Yuri</a></p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+    <script>
+        new Cleave('#form-numero', {
+            delimiters: ['(', ')', ' ', '-'],
+            blocks: [0, 2, 0, 5, 4],
+            numericOnly: true
+        });
+    </script>
+</body>
+
+</html>

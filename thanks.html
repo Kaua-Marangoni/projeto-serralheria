@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <title>Obrigado!</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #000000c9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .div-thanks {
+      width: 400px;
+      height: 400px;
+      background-color: aliceblue;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        background-color: red;
+      }
+
+      .div-thanks {
+        height: 100vh;
+        border: 3px solid #d10303;
+      }
+    }
+
+    p {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    button {
+      width: 50%;
+      height: 50px;
+      background-color: rgba(45, 158, 0, 0.856);
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all ease .2s;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+  <div class="container">
+    <div class="div-thanks">
+      <p>
+        Agradecemos seu contato! Em breve retornaremos.
+      </p>
+
+      <button><a href="index.html">Voltar</a></button>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.replace("http://127.0.0.1:5502/index.html")
+    }, 3500)
+  </script>
+</body>
+
+</html>
